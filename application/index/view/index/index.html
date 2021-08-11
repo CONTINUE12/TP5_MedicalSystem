@@ -1,0 +1,33 @@
+{include file="public/_head" /}
+<div class="container">
+    <div class="jumbotron">
+        <h1 class="animated fadeInDown">医疗大数据！</h1>
+        <p class="animated shake">医疗大数据系统是一个提供医学OCR检测功能的系统，目前使用ThinkPHP5.1框架开发，网站暂时只提供
+            医疗诊断图片的增删改查功能，其他功能后续上线。</p>
+    </div>
+    <div class="row">
+        <div class="col-sm-12 col-md-8">
+            <!-- <div class="page-header h3">{$catename|default="文章"}列表</div> -->
+            <div class="page-header h3">医疗诊断报告图片列表</div>
+            <div class="article-list">
+                {volist name="articles" id="vo"}
+                <div class="article-list-item">
+                    <a href="{:url('index/article/article', ['id' => $vo.id])}" class="title">{$vo.title}</a>
+                    <div class="info">
+                        <span class="author">作者：{$vo.author}</span>-
+                        <span class="time">发布时间：{$vo.create_time}</span>-
+                        <span class="read">阅读：{$vo.click}</span>-
+                        <span class="comment">评论：{$vo.comment}</span>
+                    </div>
+                </div>
+                {/volist}
+            </div>
+            <nav class="">
+                {$articles->render()|raw}
+            </nav>
+        </div>
+    </div>
+</div>
+{include file="public/_foot" /}
+</body>
+</html>
