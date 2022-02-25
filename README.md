@@ -14,27 +14,27 @@
 	
 ### 二.设计数据库dp_blog：
 
-####- 1.管理员表dp_admin：
+#### - 1.管理员表dp_admin：
 
     自增id、用户名username、密码password、昵称nickname、邮箱email、状态status、超级管理员super、添加时间create_time、更新时间update_time、软删除时间delete_time
 
-####- 2.会员表dp_member：
+#### - 2.会员表dp_member：
 
     自增id、用户名username、密码password、昵称nickname、邮箱email、添加时间create_time、更新时间update_time、软删除时间delete_time
 
-####- 3.导航表dp_cate：
+#### - 3.导航表dp_cate：
 
     自增id、导航名称catename、排序sort、添加时间create_time、更新时间update_time、软删除时间delete_time
 
-####- 4.图片表dp_article：
+#### - 4.图片表dp_article：
 
     自增id、图片标题title、概要desc、标签tags、内容content、推荐atop、所属导航cateid、图片作者author、查看次数click、评论次数comment、添加时间create_time、更新时间update_time、软删除时间delete_time
 
-####- 5.评论表dp_comment：
+#### - 5.评论表dp_comment：
 
     自增id、评论内容content、评论图片articleid、评论用户memberid、评论时间create_time、更新时间update_time、软删除时间delete_time
 
-####- 6.系统设置表dp_system：
+#### - 6.系统设置表dp_system：
 
     自增id、网站名称webname、网站副名称shortname、版权信息copyright、设置时间create_time、更新时间update_time、软删除时间delete_time
 
